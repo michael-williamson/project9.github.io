@@ -1,0 +1,40 @@
+nav{
+  height: 100%; 
+  position: fixed; 
+  top: $header-height; 
+  background-color:rgb(77, 77, 113); 
+  width: 45px; 
+}
+
+ul {
+    margin: 10px 0 0 0; 
+    padding-left: 0; 
+}
+  
+li {
+  list-style: none; 
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+li:hover {
+  border-left: solid 2px rgb(128, 255, 128);
+}
+
+a {
+  text-decoration: none; 
+}
+
+/******************************************
+      svg in navigation
+*******************************************/
+
+
+nav svg {
+  width:30px;
+  height: 30px;
+}
+
+.st0 {
+  fill:#ffffff; 
+}

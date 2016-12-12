@@ -1,0 +1,52 @@
+.first-chart-group-div {
+  width: 100%;
+      @media (min-width: 768px){
+          margin-top: 20px; 
+    }
+        @media (min-width: 1024px){
+              width: 95%; 
+              margin: 30px auto 0; 
+      }
+}
+
+
+.second-chart-group-div {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+      @media (min-width: 768px){
+        flex-direction: row;
+        justify-content: space-around; 
+        margin-top: 20px; 
+    }  
+}
+
+.bar-chart-div {
+  width: 100%; 
+      @media (min-width: 768px){            //height is controlled in html inline in the canvas
+          width: 50%;
+          margin: 0 ; 
+          border: solid 1px rgba(0,0,0,.4)
+    }  
+
+}
+
+.doughnut-chart-div {
+  text-align: center; 
+  width: 100%; 
+  margin-top: 15px; 
+      @media (min-width: 768px){
+          width: 50%;
+          margin-top: 0; 
+          border: solid 1px rgba(0,0,0,.4)
+    }  
+
+}
+
+
+
+
+.doughnut-chart-div label {
+    font-size: .7em; 
+    color: rgba(0,0,0,.9)
+}

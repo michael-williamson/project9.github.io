@@ -1,0 +1,675 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*  header height  */
+.first-chart-group-div {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .first-chart-group-div {
+      margin-top: 20px; } }
+  @media (min-width: 1024px) {
+    .first-chart-group-div {
+      width: 95%;
+      margin: 30px auto 0; } }
+
+.second-chart-group-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .second-chart-group-div {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 20px; } }
+
+.bar-chart-div {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .bar-chart-div {
+      width: 50%;
+      margin: 0;
+      border: solid 1px rgba(0, 0, 0, 0.4); } }
+
+.doughnut-chart-div {
+  text-align: center;
+  width: 100%;
+  margin-top: 15px; }
+  @media (min-width: 768px) {
+    .doughnut-chart-div {
+      width: 50%;
+      margin-top: 0;
+      border: solid 1px rgba(0, 0, 0, 0.4); } }
+
+.doughnut-chart-div label {
+  font-size: .7em;
+  color: rgba(0, 0, 0, 0.9); }
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px; }
+
+form label {
+  padding-bottom: 10px; }
+
+form input {
+  width: 80%;
+  margin-bottom: 10px; }
+  @media (min-width: 768px) {
+    form input {
+      width: 90%; } }
+
+form textarea {
+  width: 80%;
+  height: 100px;
+  margin-bottom: 10px; }
+  @media (min-width: 768px) {
+    form textarea {
+      width: 90%; } }
+
+form button {
+  text-align: center;
+  background-color: #7476c0;
+  color: white;
+  width: 80%;
+  border: none;
+  border-radius: 2px; }
+  @media (min-width: 768px) {
+    form button {
+      width: 90%; } }
+
+/**********************************************************
+!!!!!!!  MAIN CONTAINER AND CHILDREN  STYLING   !!!!!!!!!!
+***********************************************************/
+main {
+  width: calc(100% - 45px);
+  position: relative;
+  margin-left: 45px;
+  margin-top: 40px; }
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      search div
+***********************************/
+.h3-search-div {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 50px; }
+
+.dashboard-header-text {
+  display: inline-block;
+  margin: 5px 0 0 1px;
+  font-size: .8rem; }
+  @media (min-width: 768px) {
+    .dashboard-header-text {
+      margin: 7px auto 0;
+      font-size: 1em;
+      font-weight: 100; } }
+
+.search-box-div {
+  display: inline-flex;
+  height: 30px;
+  border-bottom: solid 1px #d9d9d9;
+  border-left: solid 1px #d9d9d9;
+  justify-content: flex-end;
+  width: 73%;
+  background-color: rgba(77, 77, 113, 0.02); }
+  @media (min-width: 768px) {
+    .search-box-div {
+      width: 87%;
+      height: 40px; } }
+  @media (min-width: 1024px) {
+    .search-box-div {
+      width: 89%; } }
+
+.search-box {
+  width: 140px;
+  height: 23px;
+  border-radius: 5px;
+  border: solid 1px #d9d9d9;
+  margin: auto 5px auto 0;
+  background-image: url("../images/arrow2.png");
+  background-repeat: no-repeat;
+  background-position: right 5px top; }
+  @media (min-width: 768px) {
+    .search-box {
+      width: 200px;
+      height: 27px;
+      background-position: right 5px top 1px; } }
+  @media (min-width: 1024px) {
+    .search-box {
+      width: 300px; } }
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ styling for alert bar...created by javascript 
+***********************************/
+#alert-bar-div {
+  width: 90%;
+  height: 25px;
+  margin: 0 auto;
+  color: white; }
+  @media (min-width: 768px) {
+    #alert-bar-div {
+      height: 40px; } }
+
+#alert-bar {
+  width: 100%;
+  background-color: #7476c0;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 3px; }
+  @media (min-width: 768px) {
+    #alert-bar {
+      height: 40px;
+      border-radius: 5px; } }
+
+.alert-text {
+  font-size: .7em;
+  margin-left: 5px; }
+  @media (min-width: 768px) {
+    .alert-text {
+      margin-left: 10px;
+      font-size: .8em; } }
+
+.alert-close-x {
+  margin-right: 5px;
+  cursor: pointer;
+  margin-top: 13px; }
+  @media (min-width: 768px) {
+    .alert-close-x {
+      margin-right: 10px;
+      margin-top: 16px;
+      font-size: 1.2em; } }
+
+@media (min-width: 768px) {
+  .user-div {
+    display: flex;
+    margin-top: 30px; } }
+
+.recent-activity-div, .new-members-div {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .recent-activity-div, .new-members-div {
+      width: 50%;
+      border: solid 1px rgba(0, 0, 0, 0.3); } }
+
+.new-members-div h3, .recent-activity-div h3 {
+  font-size: 1em;
+  margin: 40px 0 20px 10px;
+  align-self: center; }
+  @media (min-width: 768px) {
+    .new-members-div h3, .recent-activity-div h3 {
+      margin-top: 10px;
+      text-align: left; } }
+
+.new-members, .new-members-activity {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  margin: 0 auto 20px; }
+  @media (min-width: 768px) {
+    .new-members, .new-members-activity {
+      width: 95%;
+      height: 100px; } }
+
+.image-user-div {
+  width: 65%;
+  max-width: 65%; }
+
+.image-user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; }
+
+.image-user-div p {
+  max-width: 100%;
+  width: 100%;
+  word-wrap: break-word;
+  display: inline-block; }
+  @media (min-width: 768px) {
+    .image-user-div p {
+      margin: 0; } }
+
+.new-members-div span {
+  color: #4d4d71;
+  font-size: .75em;
+  word-wrap: break-word; }
+
+.date-div {
+  width: 35%; }
+
+.date-div p, .activity-symbol-div {
+  align-self: center; }
+
+.date-div p {
+  word-wrap: initial; }
+
+.activity-symbol-div {
+  font-size: 1.8em;
+  color: #4d4d71;
+  font-family: 'Lilita One', cursive; }
+
+.new-members-activity p {
+  font-size: .8em; }
+  @media (min-width: 768px) {
+    .new-members-activity p {
+      margin: 0; } }
+
+.new-members-activity span {
+  color: green;
+  font-size: .750em; }
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px; }
+
+form legend {
+  padding-bottom: 10px; }
+
+form input {
+  width: 80%;
+  margin-bottom: 10px; }
+
+.no-text-message {
+  color: red;
+  font-size: .7em;
+  margin: -10px 0 10px 0;
+  display: none;
+  text-align: left; }
+
+form textarea {
+  width: 80%;
+  height: 100px;
+  margin-bottom: 10px; }
+
+form button {
+  text-align: center;
+  background-color: #7476c0;
+  color: white;
+  width: 80%;
+  border: none;
+  border-radius: 2px; }
+  @media (min-width: 768px) {
+    form button {
+      padding: 10px 0; } }
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Fieldset styling for email notifications
+**********************************************/
+.settings-div {
+  width: 100%;
+  max-width: 100%;
+  margin: 35px auto 0; }
+  @media (min-width: 768px) {
+    .settings-div {
+      border: none;
+      text-align: center;
+      margin: 0; } }
+
+.switch-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .switch-div {
+      width: 80%; } }
+
+@media (min-width: 768px) {
+  .switch-div-1 {
+    margin-top: 10px; } }
+
+.switch-div span {
+  font-size: 12px; }
+
+.onoffswitch {
+  position: relative;
+  width: 57px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+  @media (min-width: 768px) {
+    .onoffswitch {
+      width: 60px; } }
+
+.onoffswitch-checkbox,
+.onoffswitch-checkbox-2 {
+  display: none; }
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 25px; }
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s; }
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 19px;
+  padding: 0;
+  line-height: 19px;
+  font-size: 11px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box; }
+  @media (min-width: 768px) {
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+      width: 35%; } }
+
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 5px;
+  background-color: #7476c0;
+  color: #FFFFFF; }
+  @media (min-width: 768px) {
+    .onoffswitch-inner:before {
+      padding-left: 0px; } }
+
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 5px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right; }
+  @media (min-width: 768px) {
+    .onoffswitch-inner:after {
+      padding-left: 45px; } }
+
+.onoffswitch-switch {
+  display: block;
+  width: 26px;
+  margin: -2px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 34px;
+  border: 2px solid #999999;
+  border-radius: 25px;
+  transition: all 0.3s ease-in 0s; }
+  @media (min-width: 768px) {
+    .onoffswitch-switch {
+      width: 29px; } }
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner,
+.onoffswitch-checkbox-2:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0; }
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch,
+.onoffswitch-checkbox-2:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px; }
+
+.activity-button-div {
+  display: flex;
+  margin-top: 15px;
+  width: 100%;
+  justify-content: space-between; }
+  @media (min-width: 768px) {
+    .activity-button-div {
+      margin: 0; } }
+
+.select-div {
+  text-align: center; }
+
+select {
+  width: 90%;
+  margin: 0 auto 10px; }
+  @media (min-width: 768px) {
+    select {
+      margin: 18px auto 12px; } }
+
+.save-button, .cancel-button {
+  width: 45%;
+  padding: 5px 0;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .save-button, .cancel-button {
+      margin: 0;
+      padding: 10px 0; } }
+
+.save-button {
+  background-color: #7476c0; }
+
+.cancel-button {
+  background-color: grey; }
+
+.flex-new-members {
+  display: flex;
+  justify-content: space-between; }
+
+/**************************
+Social Stats STYLING
+***************************/
+.social-stats-div {
+  margin-top: 40px; }
+  @media (min-width: 768px) {
+    .social-stats-div {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 0; } }
+
+.social-stats-header {
+  margin: 30px 0 30px 10px;
+  display: block; }
+  @media (min-width: 768px) {
+    .social-stats-header {
+      margin-top: 50px; } }
+
+.twitter-div, .facebook-div, .google-div {
+  display: flex;
+  border: solid 1px black;
+  background-color: rgba(77, 77, 113, 0.1); }
+  @media (min-width: 768px) {
+    .twitter-div, .facebook-div, .google-div {
+      width: 30%; } }
+
+.twitter-icon-div, .facebook-icon-div, .google-icon-div {
+  border-radius: 75%;
+  background-color: #4d4d71;
+  height: 50px;
+  width: 50px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center; }
+
+.twitter-icon, .facebook-icon, .google-icon {
+  width: 30px;
+  height: 30px;
+  fill: white; }
+
+.twitter-text, .facebook-text, .google-text {
+  margin-bottom: 0;
+  color: #4d4d71; }
+
+.twitter-visit-value, .facebook-visit-value, .google-visit-value {
+  margin-top: 0;
+  font-size: 1.7em; }
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+/******************************************************************
+***** HEADER STYLING  *********************!!!!!!!!!!!!!!!!!!!!!!!!
+*******************************************************************/
+header {
+  background-color: #7476c0;
+  width: 100%;
+  max-width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white; }
+
+header h3 {
+  font-size: 1em;
+  margin-left: 10px; }
+
+header span {
+  font-weight: 100;
+  font-size: .8em; }
+
+/*^^^^^^^^^^^^^^^^^^^^
+ alerts and user image in header 
+***********************/
+.user-alerts-div {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  height: 100%; }
+
+.bell-alert-div {
+  position: relative;
+  margin-right: 15px;
+  display: flex;
+  align-items: center; }
+
+.alert-light {
+  width: 3px;
+  height: 3px;
+  background-color: lime;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.header-image-div {
+  width: 80px;
+  border-left: solid 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 90%; }
+  @media (min-width: 768px) {
+    .header-image-div {
+      flex-direction: row;
+      width: 140px;
+      padding-left: 10px; } }
+  @media (min-width: 1024px) {
+    .header-image-div {
+      padding-left: 15px;
+      width: 180px; } }
+
+.image-div {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .image-div {
+      margin-top: 0; } }
+
+.header-image {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: -4px; }
+  @media (min-width: 768px) {
+    .header-image {
+      margin-top: 0px;
+      width: 25px;
+      height: 25px; } }
+
+.header-image-div-username-div {
+  margin-top: -8px;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .header-image-div-username-div {
+      display: flex;
+      margin-top: 0;
+      width: 100%;
+      justify-content: center;
+      align-items: center; } }
+  @media (min-width: 1024px) {
+    .header-image-div-username-div {
+      text-align: left;
+      margin-left: -6px; } }
+
+.header-image-div span {
+  word-wrap: normal;
+  font-size: .5em; }
+  @media (min-width: 768px) {
+    .header-image-div span {
+      text-align: center;
+      font-size: .7em;
+      margin-top: -2px; } }
+  @media (min-width: 1024px) {
+    .header-image-div span {
+      font-size: .9em; } }
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      svg in header 
+***********************************/
+header svg {
+  width: 15px;
+  height: 15px; }
+  @media (min-width: 768px) {
+    header svg {
+      width: 17px;
+      height: 17px; } }
+  @media (min-width: 1024px) {
+    header svg {
+      width: 20px;
+      height: 20px; } }
+
+.st1 {
+  fill: #ffffff; }
+
+nav {
+  height: 100%;
+  position: fixed;
+  top: 40px;
+  background-color: #4d4d71;
+  width: 45px; }
+
+ul {
+  margin: 10px 0 0 0;
+  padding-left: 0; }
+
+li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 20px; }
+
+li:hover {
+  border-left: solid 2px #80ff80; }
+
+a {
+  text-decoration: none; }
+
+/******************************************
+      svg in navigation
+*******************************************/
+nav svg {
+  width: 30px;
+  height: 30px; }
+
+.st0 {
+  fill: #ffffff; }
+
+/*# sourceMappingURL=styles.css.map */
