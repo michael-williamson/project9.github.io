@@ -226,6 +226,10 @@ main {
   height: 40px;
   border-radius: 50%; }
 
+.comment-icon {
+  width: 40px;
+  height: 40px; }
+
 .image-user-div p {
   max-width: 100%;
   width: 100%;
